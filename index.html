@@ -23,9 +23,9 @@
     (function (w, d, e, u, f, l, n) {
       w[f] = w[f] || function () {
         (w[f].q = w[f].q || [])
-        .push(arguments);
+          .push(arguments);
       }, l = d.createElement(e), l.async = 1, l.src = u,
-      n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
+        n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
     })
       (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
     ml('account', 'YOUR_ACCOUNT_ID');
@@ -35,60 +35,64 @@
 
 <body>
   <!-- Navigation -->
-<nav class="navbar">
-  <div class="nav-container">
-    <!-- Logo Link -->
-    <a href="/" class="logo-link">
-      <img src="images/logo.jpg" alt="FM Marketing Logo" class="logo-img">
-      <span class="logo-text">FM Marketing</span>
-    </a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo Link -->
+      <a href="/" class="logo-link">
+        <img src="images/logo.jpg" alt="FM Marketing Logo" class="logo-img">
+        <span class="logo-text">FM Marketing</span>
+      </a>
 
-    <!-- Navigation Menu -->
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle">Projects ▼</a>
-        <div class="dropdown-menu">
-          <a href="projects/rudn-enclave.html">Rudn Enclave</a>
-          <a href="projects/blue-world-city.html">Blue World City</a>
-          <a href="projects/park-view-city.html">Park View City</a>
-          <a href="projects/capital-smart-city.html">Capital Smart City</a>
-          <a href="projects/faisal-town-phase-2.html">Faisal Town Phase 2</a>
-          <a href="projects/lake-shore-city.html">Lake Shore City</a>
-          <a href="projects/may-fair.html">May Fair</a>
-          <a href="projects/taj-residencia.html">Taj Residencia</a>
-          <a href="projects/bahria.html">Bahria</a>
-          <a href="projects/dha.html">DHA</a>
-        </div>
-      </li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Projects <span class="caret">▼</span>
+          </a>
 
-    <button class="mobile-toggle">☰</button>
-  </div>
-</nav>
+          <div class="dropdown-menu" role="menu" aria-label="Projects">
+            <a role="menuitem" href="projects/rudn-enclave.html">Rudn Enclave</a>
+            <a role="menuitem" href="projects/blue-world-city.html">Blue World City</a>
+            <a role="menuitem" href="projects/park-view-city.html">Park View City</a>
+            <a role="menuitem" href="projects/capital-smart-city.html">Capital Smart City</a>
+            <a role="menuitem" href="projects/faisal-town-phase-2.html">Faisal Town Phase 2</a>
+            <a role="menuitem" href="projects/lake-shore-city.html">Lake Shore City</a>
+            <a role="menuitem" href="projects/may-fair.html">May Fair</a>
+            <a role="menuitem" href="projects/taj-residencia.html">Taj Residencia</a>
+            <a role="menuitem" href="projects/bahria.html">Bahria</a>
+            <a role="menuitem" href="projects/dha.html">DHA</a>
+          </div>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="mobile-toggle">☰</button>
+    </div>
+  </nav>
 
 
   <!-- Hero Section with Video Background -->
-<!-- Hero Section with Video Background -->
-<section class="hero">
-  <!-- Real Estate Video -->
-  <video class="hero-video" autoplay muted loop playsinline poster="images/luxury_modern_real_e_193f3026.jpg">
-    <source src="images/Video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Welcome to <span class="gold-text">FM Marketing</span></h1>
-    <p>Your Trusted Partner in Premium Real Estate Investments</p>
-    <div class="cta-buttons">
-      <a href="contact.html" class="btn btn-primary">Get Started</a>
-      <a href="#projects" class="btn btn-outline">Explore Projects</a>
+  <!-- Hero Section with Video Background -->
+  <section class="hero">
+    <!-- Real Estate Video -->
+    <video class="hero-video" autoplay muted loop playsinline poster="images/luxury_modern_real_e_193f3026.jpg">
+      <source src="images/Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to <span class="gold-text">FM Marketing</span></h1>
+      <p>Your Trusted Partner in Premium Real Estate Investments</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <a href="#projects" class="btn btn-outline">Explore Projects</a>
+      </div>
     </div>
-  </div>
-  <div class="scroll-indicator">↓</div>
-</section>
+    <div class="scroll-indicator">↓</div>
+  </section>
 
 
   <!-- About Section -->
@@ -349,7 +353,8 @@
 
     <div class="footer-bottom">
       <p>&copy; 2024 FM Marketing. All Rights Reserved.</p>
-      <p>Designed By <strong style="color: var(--gold);"><a href="https://empiredigisol.com/" target="_blank" style="text-decoration: none; color: var(--gold);">Empire Digisol</a></strong></p>
+      <p>Designed By <strong style="color: var(--gold);"><a href="https://empiredigisol.com/" target="_blank"
+            style="text-decoration: none; color: var(--gold);">Empire Digisol</a></strong></p>
 
     </div>
   </footer>

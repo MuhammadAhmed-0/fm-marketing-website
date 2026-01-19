@@ -133,61 +133,132 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-/* Dropdown Menu */
-.dropdown {
+/* ===== Projects Dropdown - FM Marketing (Responsive) ===== */
+.nav-menu .dropdown {
   position: relative;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.dropdown-menu {
+/* Desktop + large screens: hover dropdown */
+.nav-menu .dropdown-menu {
   position: absolute;
   top: 100%;
+  margin-top: 8px;
+
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: var(--dark-bg);
-  min-width: 280px;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
+  transform: translateX(-50%);
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
+  width: 320px;
+  background: #1A1A1A;
+  border-radius: 16px;
+  padding: 12px;
 
-.dropdown-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: var(--transition);
-  font-size: 0.9rem;
-}
+  box-shadow: 0 18px 45px rgba(0,0,0,0.4);
+  border: 1px solid rgba(212, 175, 55, 0.25);
 
-.dropdown-menu a:hover {
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--gold);
-}
-
-.dropdown-menu a::after {
   display: none;
+  z-index: 9999;
 }
+
+/* Prevent disappearing when moving mouse down (hover bridge) */
+@media (min-width: 769px) {
+  .nav-menu .dropdown::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 100%;
+    height: 14px;
+  }
+
+  .nav-menu .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Dropdown links */
+.nav-menu .dropdown-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: none !important; /* remove any divider lines */
+}
+
+/* Extra safety: remove line created by ::before/::after if exists anywhere */
+.nav-menu .dropdown-menu a::before,
+.nav-menu .dropdown-menu a::after {
+  content: none !important;
+  border: none !important;
+}
+
+.nav-menu .dropdown-menu a:hover,
+.nav-menu .dropdown-menu a:focus {
+  background: rgba(212, 175, 55, 0.12);
+  color: #D4AF37;
+  outline: none;
+}
+
+/* ===== Responsive sizes ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .nav-menu .dropdown-menu {
+    width: 300px;
+  }
+}
+
+/* Small devices: dropdown should NOT be absolute popup
+   It should open inside the mobile menu (your nav-menu becomes vertical) */
+@media (max-width: 768px) {
+  .nav-menu .dropdown-menu {
+    position: static;
+    transform: none;
+    left: auto;
+
+    width: 100%;
+    margin-top: 0;
+
+    padding: 8px 0;
+    border-radius: 12px;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    display: none;
+  }
+
+  /* Show dropdown when JS adds .open */
+  .nav-menu .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  /* Mobile links */
+  .nav-menu .dropdown-menu a {
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 0;
+    color: #ffffff;
+  }
+
+  .nav-menu .dropdown-menu a:hover {
+    background: #181818;
+    color: var(--gold);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .nav-menu .dropdown-menu a {
+    font-size: 1rem;
+    padding: 11px 0;
+  }
+}
+
 
 /* Mobile Menu Toggle */
 .mobile-toggle {
